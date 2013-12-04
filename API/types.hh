@@ -78,12 +78,12 @@ namespace	request
     /** User Status Class info */
     struct	Status
     {
-      static const Status	DISCONNECTED = 0;	/**< Disconnected status */
-      static const Status	CONNECTED = 1;		/**< Connected status */
-      static const Status	ABSENT = 2;		/**< Absent status */
-      static const Status	OCCUPIED = 3;		/**< Occupied status */
-      static const Status	DELETED = 4;		/**< Deleted status */
-      static const Status	INVISIBLE = 5;		/**< Invisible status */
+      static const request::Status	DISCONNECTED = 0;	/**< Disconnected status */
+      static const request::Status	CONNECTED = 1;		/**< Connected status */
+      static const request::Status	ABSENT = 2;		/**< Absent status */
+      static const request::Status	OCCUPIED = 3;		/**< Occupied status */
+      static const request::Status	DELETED = 4;		/**< Deleted status */
+      static const request::Status	INVISIBLE = 5;		/**< Invisible status */
     };
 
   };
