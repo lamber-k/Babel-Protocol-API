@@ -50,6 +50,7 @@ typedef double			Rdouble;	/**< Double floating point precision */
 namespace	request
 {
   typedef Ruint8	Rights;			/**< User Rights type */
+  typedef Rbool		Privacy;		/**< Privacy Rights type */
   typedef Ruint16	ID;			/**< Request code ID type */
   typedef std::string	PasswordType;		/**< Password type */
   typedef Ruint8	UsernameLen;		/**< Username Len type */
@@ -62,7 +63,16 @@ namespace	request
 /** Crypt Trait Class info */
 struct Crypt
 {
-  static const int	PASS_SIZE = 32;		/**< Cryptography Size */
+  static const unsigned int	PASS_SIZE = 32;		/**< Cryptography Size */
 };
+
+/** Database Class info */
+struct	Database
+{
+  static const request::Privacy	PRIVATE = 0;	/**< Private mode */
+  static const request::Privacy	PUBLIC = 1;	/**< Public mode */
+  static const request::Rights	ROOT = 0;	/**< Private mode */
+  static const request::Rights	USER = 1;	/**< Public mode */
+}
 
 #endif /* TYPES_H_ */
