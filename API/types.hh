@@ -71,8 +71,8 @@ struct	Database
 {
   static const request::Privacy	PRIVATE = 0;	/**< Private mode */
   static const request::Privacy	PUBLIC = 1;	/**< Public mode */
-  static const request::Rights	ROOT = 0;	/**< Private mode */
-  static const request::Rights	USER = 1;	/**< Public mode */
+  static const request::Rights	ROOT = 0;	/**< Root mode */
+  static const request::Rights	USER = 1;	/**< User mode */
 }
 
 #endif /* TYPES_H_ */
