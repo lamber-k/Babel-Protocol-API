@@ -66,6 +66,7 @@ namespace	request
   typedef Ruint8	Fromlen;		/**< Size of the name of the sender type */
   typedef std::string	From;			/**< Name of the sender type */
   typedef Rdouble	SinceWhen;		/**< Time when the message was received type */
+  typedef Ruint8	Options;		/**< Options type */
   /** Crypt Trait Class info */
   struct Crypt
   {
