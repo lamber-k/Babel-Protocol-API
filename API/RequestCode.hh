@@ -30,7 +30,7 @@ namespace request
 	  static const ID  GET_MISSED =		1201;
 	  static const ID  AUTO_ANSWER =	1203;
       }
-
+      /** Server Friend codes */
       namespace friends
       {
 	  static const ID UPDATE =	1300;
@@ -47,6 +47,7 @@ namespace request
 	  static const ID MESSAGE =	1500;
       }
   }
+    /** Client codes */
   namespace client
   {
       namespace auth
@@ -68,7 +69,7 @@ namespace request
 	  static const ID SET_AUTO_ANSWER =	0205;
 	  static const ID UNSET_AUTO_ANSWER =	0206;
       }
-
+      /** Client Friend codes */
       namespace friends
       {
 	  static const ID REQUEST =	0300;
