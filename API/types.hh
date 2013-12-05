@@ -53,8 +53,8 @@ namespace	request
   typedef Rbool		Privacy;		/**< Privacy Rights type */
   typedef Ruint16	ID;			/**< Request code ID type */
   typedef std::string	PasswordType;		/**< Password type */
-  typedef Ruint8	UsernameLen;		/**< Username Len type */
-  typedef std::string	Username;		/**< Username type */
+  typedef Ruint8	UserNameLen;		/**< Username Len type */
+  typedef std::string	UserName;		/**< Username type */
   typedef Ruint8	Status;			/**< Status type */
   typedef Ruint8	StatusDetailLen;	/**< Status detail Len type */
   typedef std::string	StatusDetail;		/**< Status detail type */

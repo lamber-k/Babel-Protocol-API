@@ -27,7 +27,7 @@ namespace	auth
     {
 	public:
 	NewClientRequest();
-	NewClientRequest(const request::UsernameLen &, const request::Username &,
+	NewClientRequest(const request::UserNameLen &, const request::UserName &,
 			 const request::PasswordType &, const request::Privacy &);
 	NewClientRequest(NewClientRequest const&);
 	virtual ~NewClientRequest();
@@ -40,8 +40,8 @@ namespace	auth
 	Protocol      &unserialize(Protocol &);
 
 	private:
-	request::UsernameLen	_namelen;
-	request::Username		_name;
+	request::UserNameLen	_nameLen;
+	request::UserName		_name;
 	request::PasswordType	_passwd;
 	request::Privacy		_privacy;
     };
@@ -50,7 +50,7 @@ namespace	auth
     {
 	public:
 	DelClientRequest();
-	DelClientRequest(const request::UsernameLen &, const request::Username &,
+	DelClientRequest(const request::UserNameLen &, const request::UserName &,
 			 const request::PasswordType &);
 	DelClientRequest(DelClientRequest const&);
 	virtual ~DelClientRequest();
@@ -63,8 +63,8 @@ namespace	auth
 	Protocol      &unserialize(Protocol &);
 
 	private:
-	request::UsernameLen	_namelen;
-	request::Username		_name;
+	request::UserNameLen	_nameLen;
+	request::UserName		_name;
 	request::PasswordType	_passwd;
     };
 
@@ -72,7 +72,7 @@ namespace	auth
     {
 	public:
 	ModifyClientRequest();
-	ModifyClientRequest(const request::UsernameLen &, const request::Username &,
+	ModifyClientRequest(const request::UserNameLen &, const request::UserName &,
 			    const request::PasswordType &, const request::PasswordType &);
 	ModifyClientRequest(ModifyClientRequest const&);
 	virtual ~ModifyClientRequest();
@@ -85,8 +85,8 @@ namespace	auth
 	Protocol      &unserialize(Protocol &);
 
 	private:
-	request::UsernameLen	_namelen;
-	request::Username		_name;
+	request::UserNameLen	_nameLen;
+	request::UserName		_name;
 	request::PasswordType	_oldpasswd;
 	request::PasswordType	_newpasswd;
     };
@@ -95,7 +95,7 @@ namespace	auth
     {
 	public:
 	ConnectRequest();
-	ConnectRequest(const request::UsernameLen &, const request::Username &,
+	ConnectRequest(const request::UserNameLen &, const request::UserName &,
 		       const request::PasswordType &);
 	ConnectRequest(ConnectRequest const&);
 	virtual ~ConnectRequest();
@@ -108,8 +108,8 @@ namespace	auth
 	Protocol      &unserialize(Protocol &);
 
 	private:
-	request::UsernameLen	_namelen;
-	request::Username		_name;
+	request::UserNameLen	_nameLen;
+	request::UserName		_name;
 	request::PasswordType	_passwd;
     };
 
