@@ -60,7 +60,12 @@ namespace	request
   typedef std::string	StatusDetail;		/**< Status detail type */
   typedef Ruint16	Port;			/**< Port type */
   typedef Ruint32	IP;			/**< IP type */
-
+  typedef Ruint8	IdxAnswer;		/**< Idx of the answer type */
+  typedef Ruint16	Answerlen;		/**< Size of the answer type */
+  typedef std::string	Answer;			/**< Answer type */
+  typedef Ruint8	Fromlen;		/**< Size of the name of the sender type */
+  typedef std::string	From;			/**< Name of the sender type */
+  typedef Rdouble	SinceWhen;		/**< Time when the message was received type */
   /** Crypt Trait Class info */
   struct Crypt
   {
