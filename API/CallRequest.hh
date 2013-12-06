@@ -6,10 +6,10 @@
 
 namespace	call
 {
-    class CallRequest
+    class CallRequest : public ARequest
     {
 	public:
-	virtual ~Callrequest();
+	virtual ~CallRequest();
 
 	virtual ARequest	*clone();
 	virtual Protocol	&serialize(Protocol &)const;
@@ -39,6 +39,12 @@ namespace	call
 	    Protocol	&serialize(Protocol &)const;
 	    Protocol	&unserialize(Protocol &);
 
+	    const request::Options	&option()const {return _option;}
+	    const request::FromLen	&fromLen()const {return _fromLen;}
+	    const request::From		&from()const {return _from;}
+	    const request::FromLen	&toLen()const {return _toLen;}
+	    const request::From		&to()const {return _to;}
+
 	    protected:
 	    request::Options	_option;
 	    request::FromLen	_fromLen;
@@ -63,6 +69,11 @@ namespace	call
 	    Protocol	&serialize(Protocol &)const;
 	    Protocol	&unserialize(Protocol &);
 
+	    const request::FromLen	&fromLen()const {return _fromLen;}
+	    const request::From		&from()const {return _from;}
+	    const request::FromLen	&toLen()const {return _toLen;}
+	    const request::From		&to()const {return _to;}
+
 	    protected:
 	    request::FromLen	_fromLen;
 	    request::From	_from;
@@ -86,6 +97,11 @@ namespace	call
 	    Protocol	&serialize(Protocol &)const;
 	    Protocol	&unserialize(Protocol &);
 
+	    const request::FromLen	&fromLen()const {return _fromLen;}
+	    const request::From		&from()const {return _from;}
+	    const request::FromLen	&toLen()const {return _toLen;}
+	    const request::From		&to()const {return _to;}
+
 	    protected:
 	    request::FromLen	_fromLen;
 	    request::From	_from;
@@ -108,6 +124,11 @@ namespace	call
 	    ARequest	*clone();
 	    Protocol	&serialize(Protocol &)const;
 	    Protocol	&unserialize(Protocol &);
+
+	    const request::FromLen	&fromLen()const {return _fromLen;}
+	    const request::From		&from()const {return _from;}
+	    const request::FromLen	&toLen()const {return _toLen;}
+	    const request::From		&to()const {return _to;}
 
 	    protected:
 	    request::FromLen	_fromLen;
@@ -147,6 +168,9 @@ namespace	call
 	    ARequest	*clone();
 	    Protocol	&serialize(Protocol &)const;
 	    Protocol	&unserialize(Protocol &);
+
+	    const request::IP		&ip()const {return _ip;}
+	    const request::Port		&port()const {return _port;}
 
 	    protected:
 	    request::IP		_ip;

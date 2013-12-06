@@ -39,6 +39,11 @@ namespace	auth
 	Protocol      &serialize(Protocol &)const;
 	Protocol      &unserialize(Protocol &);
 
+	const request::UserNameLen	&nameLen()const {return _nameLen;}
+	const request::UserName		&name()const {return _name;}
+	const request::PasswordType	&passwd()const {return _passwd;}
+	const request::Privacy		&privacy()const {return _privacy;}
+
 	private:
 	request::UserNameLen	_nameLen;
 	request::UserName		_name;
@@ -62,6 +67,10 @@ namespace	auth
 	Protocol      &serialize(Protocol &)const;
 	Protocol      &unserialize(Protocol &);
 
+	const request::UserNameLen	&nameLen()const {return _nameLen;}
+	const request::UserName		&name()const {return _name;}
+	const request::PasswordType	&passwd()const {return _passwd;}
+
 	private:
 	request::UserNameLen	_nameLen;
 	request::UserName		_name;
@@ -84,11 +93,16 @@ namespace	auth
 	Protocol      &serialize(Protocol &)const;
 	Protocol      &unserialize(Protocol &);
 
+	const request::UserNameLen	&nameLen()const {return _nameLen;}
+	const request::UserName		&name()const {return _name;}
+	const request::PasswordType	&oldPasswd()const {return _oldPasswd;}
+	const request::PasswordType	&newPasswd()const {return _newPasswd;}
+
 	private:
 	request::UserNameLen	_nameLen;
-	request::UserName		_name;
-	request::PasswordType	_oldpasswd;
-	request::PasswordType	_newpasswd;
+	request::UserName	_name;
+	request::PasswordType	_oldPasswd;
+	request::PasswordType	_newPasswd;
     };
 
     class ConnectRequest : public AuthRequest
@@ -107,21 +121,25 @@ namespace	auth
 	Protocol      &serialize(Protocol &)const;
 	Protocol      &unserialize(Protocol &);
 
+	const request::UserNameLen	&nameLen()const {return _nameLen;}
+	const request::UserName		&name()const {return _name;}
+	const request::PasswordType	&passwd()const {return _passwd;}
+
 	private:
 	request::UserNameLen	_nameLen;
-	request::UserName		_name;
+	request::UserName	_name;
 	request::PasswordType	_passwd;
     };
 
-    class DiconnectRequest : public AuthRequest
+    class DisconnectRequest : public AuthRequest
     {
 	public:
-	DiconnectRequest();
-	DiconnectRequest(DiconnectRequest const&);
-	virtual ~DiconnectRequest();
+	DisconnectRequest();
+	DisconnectRequest(DisconnectRequest const&);
+	virtual ~DisconnectRequest();
 
 	public:
-	DiconnectRequest& operator=(DiconnectRequest const&);
+	DisconnectRequest& operator=(DisconnectRequest const&);
 
 	ARequest      *clone();
     };

@@ -11,7 +11,7 @@ class	ServerRequest : public ARequest
 
 public:
   ServerRequest();
-  ServerRequest(const requestCode::CodeID);
+  ServerRequest(const request::ID);
   ~ServerRequest();
 
   ServerRequest(ServerRequest const&);

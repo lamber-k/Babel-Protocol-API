@@ -18,8 +18,8 @@ namespace	friends
 	virtual Protocol      &unserialize(Protocol &);
 
 	protected:
-	AuthRequest();
-	AuthRequest(const request::ID &);
+	FriendsRequest();
+	FriendsRequest(const request::ID &);
     };
 
     namespace	client
@@ -143,6 +143,12 @@ namespace	friends
 	    ARequest      *clone();
 	    Protocol      &serialize(Protocol &)const;
 	    Protocol      &unserialize(Protocol &);
+
+	    const request::UserNameLen		&nameLen()const {return _nameLen;}
+	    const request::UserName		&name()const {return _name;}
+	    const request::Status		&status()const {return _status;}
+	    const request::StatusDetailLen	&statusDetailLen()const {return _statusDetailLen;}
+	    const request::StatusDetail		&statusDetail()const {return _statusDetail;}
 
 	    private:
 	    request::UserNameLen	_nameLen;

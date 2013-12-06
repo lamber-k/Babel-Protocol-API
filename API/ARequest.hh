@@ -26,12 +26,12 @@ public:
   };
 
 public:
-  ARequest(const requestCode::CodeID);
+  ARequest(const request::ID);
   virtual ~ARequest();
 
 public:
-  requestCode::CodeID	code() const;
-  void			code(const requestCode::CodeID);
+  request::ID	code() const;
+  void			code(const request::ID);
 
 public:
   ARequest(ARequest const&);
@@ -43,7 +43,7 @@ public:
   virtual Protocol	&unserialize(Protocol &) = 0;
 
 protected:
-  requestCode::CodeID	_code;
+  request::ID	_code;
 };
 
 #endif /* AREQUEST_H_ */
