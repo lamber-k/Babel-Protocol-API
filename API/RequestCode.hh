@@ -23,12 +23,19 @@ namespace request
     static const ID NO_CONTENT =	1004; /**< Request don't have */
     static const ID PARTIAL_CONTENT =	1005; /**< Request have partial content */
     static const ID NO_SLOTS =		1006; /**< No more slots available */
-
+    /** Server Auth codes */
+    namespace auth
+    {
+	static const ID HANDSHAKE = 1100;
+    }
+    /** Server Perso codes */
     namespace perso
     {
       static const ID  MISSED_CALLS =	1200; /**< Get the number of missed calls */
-      static const ID  GET_MISSED =	1201; /**< Get a missed call information */
+      static const ID  AUDIO_DATA =	1201; /**< Send an audio stream */
+      static const ID  GET_MISSED =	1202; /**< Get a missed call information */
       static const ID  AUTO_ANSWER =	1203; /**< Set an auto answer message */
+      static const ID  PING =		1204; /**< Pings a client */
     }
     /** Server Friend codes */
     namespace friends
@@ -40,13 +47,6 @@ namespace request
     namespace call
     {
       static const ID TIMEOUT =		1400; /**< Call Timeout */
-      static const ID CALL =		1401; /**< Call someone */
-    }
-
-    /** Server Chat codes */
-    namespace chat
-    {
-      static const ID MESSAGE =		1500; /**< Send a message to a client */
     }
   }
   /** Client codes */
@@ -71,7 +71,8 @@ namespace request
       static const ID GET_MISSED =		203; /**< Get missed call informations */
       static const ID DEL_MISSED =		204; /**< Delete missed call */
       static const ID SET_AUTO_ANSWER =		205; /**< Set an auto answer message */
-      static const ID UNSET_AUTO_ANSWER =	206; /**< Delete your auto answer message */
+      static const ID PONG =			206; /**< Respond to a Ping */
+      static const ID UNSET_AUTO_ANSWER =	207; /**< Delete your auto answer message */
     }
 
     /** Client Friend codes */

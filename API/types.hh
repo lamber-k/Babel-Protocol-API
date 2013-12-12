@@ -56,6 +56,8 @@ namespace	request
   typedef Ruint8	Rights;			/**< User Rights type */
   typedef Rbool		Privacy;		/**< Privacy Rights type */
   typedef Ruint16	ID;			/**< Request code ID type */
+  typedef Ruint16	PingID;			/**< Ping ID type */
+  typedef Ruint16	VersionType;		/**< Version type */
   typedef std::string	PasswordType;		/**< Password type */
   typedef Ruint8	UsernameLen;		/**< Username Len type */
   typedef std::string	Username;		/**< Username type */
@@ -72,6 +74,8 @@ namespace	request
   typedef std::string	Answer;			/**< Answer type */
   typedef Ruint8	FromLen;		/**< Size of the name of the sender type */
   typedef std::string	From;			/**< Name of the sender type */
+  typedef Ruint16	StreamLen;		/**< Size of the stream type */
+  typedef std::string	Stream;			/**< Stream type */
   typedef Rdouble	SinceWhen;		/**< Time when the message was received type */
   typedef Ruint8	Options;		/**< Options type */
   typedef Ruint16	MsgLen;			/**< Size of the message type */
