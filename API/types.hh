@@ -81,6 +81,7 @@ namespace	request
   typedef std::string	Message;		/**< Message type */
   typedef Ruint8	Status;			/**< Status type */
   typedef Ruint8	StatusDetailLen;	/**< Status detail Len type */
+  typedef Ruint8	NbCalls;		/**< Nb msg missed type */
   typedef std::string	StatusDetail;		/**< Status detail type */
   typedef Ruint16	Port;			/**< Port type */
   typedef Ruint32	IP;			/**< IP type */
