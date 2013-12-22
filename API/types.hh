@@ -129,7 +129,7 @@ namespace	request
   struct	audio
   {
     static const Major		VERSION = 1;		/**< Current audio protocol version */
-  }
+  };
 
   /** \brief User Class info */
   struct	User
